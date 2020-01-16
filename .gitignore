@@ -1,6 +1,2 @@
-target/
 # Project exclude paths
-.idea
-*.iws
-*.iml
-*.ipr
+/ThreadCreateDemo/target/
