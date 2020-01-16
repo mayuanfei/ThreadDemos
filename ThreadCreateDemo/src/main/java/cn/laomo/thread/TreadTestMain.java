@@ -24,6 +24,7 @@ public class TreadTestMain {
             System.out.println("main主线程正在执行："+System.currentTimeMillis());
         }
 
+        //get方法会阻塞线程，所以要在不需要并行的地方获得其值
         String result = futureTask.get();
         System.out.println("MyCallabel执行结果：" + result);
 
