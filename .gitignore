@@ -1,9 +1,6 @@
-# Project exclude paths
-/ThreadCreateDemo/target/
-.idea/
-ThreadDemos.iml
-ThreadDemosCreate1/ThreadDemosCreate1.iml
-ThreadDemosCreate1/src/main/resources/
-ThreadDemosCreate1/src/test/
-ThreadDemosCreate1/target/
 target/
+# Project exclude paths
+.idea
+*.iws
+*.iml
+*.ipr
