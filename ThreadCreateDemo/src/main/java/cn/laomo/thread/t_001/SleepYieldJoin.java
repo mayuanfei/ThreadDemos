@@ -25,7 +25,7 @@ public class SleepYieldJoin {
         Thread.sleep(2000);
     }
 
-    //让出cpu时间片
+    //让出cpu时间片,进入可运行状态
     @Test
     public void testYield() throws Exception {
         new Thread(() -> {
