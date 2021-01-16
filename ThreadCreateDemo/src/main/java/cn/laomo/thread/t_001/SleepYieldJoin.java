@@ -20,6 +20,7 @@ public class SleepYieldJoin {
                 e.printStackTrace();
             }
         }).start();
+
         //为了可以打印出上面的“线程睡眠2秒”。
         Thread.sleep(2000);
     }
