@@ -1,6 +1,9 @@
-package cn.laomo.thread;
+package cn.laomo.thread.t_000;
+
+import lombok.SneakyThrows;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @program: MultThreadDemos
@@ -9,10 +12,12 @@ import java.util.Date;
  * @create: 2020-01-16 10:20
  **/
 public class MyThread extends Thread {
+    @SneakyThrows
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            System.out.println(String.format("MyThread执行:%d", System.currentTimeMillis()));
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println(String.format("MyThread执行次数:%d", i));
         }
     }
 }

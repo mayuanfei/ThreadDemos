@@ -1,6 +1,7 @@
-package cn.laomo.thread;
+package cn.laomo.thread.t_000;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @program: MultThreadDemos
@@ -10,10 +11,10 @@ import java.util.concurrent.Callable;
  **/
 public class MyCallable implements Callable<String> {
 
-    @Override
     public String call() throws Exception {
         for (int i = 0; i < 10; i++) {
-            System.out.println(Thread.currentThread().getName()+"执行时间："+System.currentTimeMillis()+";循环次数："+i);
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("MyCallable循环次数："+i);
         }
         return "MyCallable执行完成";
     }
