@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class SleepYieldJoin {
 
 
-    //线程睡眠2秒。线程sleep后进入阻塞状态，sleep完成变成可运行状态
+    //线程睡眠2秒。线程sleep后进入定时等待状态，sleep完成变成可运行状态
     @Test
     public void testSleep() throws Exception{
         new Thread(() -> {
