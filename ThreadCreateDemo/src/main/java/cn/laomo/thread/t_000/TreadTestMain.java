@@ -31,7 +31,6 @@ public class TreadTestMain {
         String result = futureTask.get();
         System.out.println("MyCallabel执行结果：" + result);
 
-
         //采用线程池方式执行
         ExecutorService executorService = Executors.newCachedThreadPool();
         Future<String> submit = executorService.submit(new MyCallable());
