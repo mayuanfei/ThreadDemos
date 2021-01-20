@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @create: 2020-01-16 14:50
  **/
 public class MyRunnable implements Runnable {
+    @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
             try {
