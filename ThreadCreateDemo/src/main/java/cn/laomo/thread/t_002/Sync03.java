@@ -11,11 +11,19 @@ public class Sync03 {
 
     //等价于synchronized(this)
     public synchronized void addCount() {
-        count++;
+        for (int i = 0; i < 100; i++) {
+            count++;
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("count="+count);
     }
 
-    public int getCount() {
+    public /*synchronized*/ int getCount() {
+        System.out.println("获得count="+this.count);
         return count;
     }
     

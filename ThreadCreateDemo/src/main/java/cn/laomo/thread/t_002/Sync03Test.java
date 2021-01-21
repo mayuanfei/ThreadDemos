@@ -9,21 +9,8 @@ package cn.laomo.thread.t_002;
 public class Sync03Test {
     public static void main(String[] args) {
         Sync03 s3 = new Sync03();
-        Thread t1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int j = 0; j < 100; j++) {
-                    s3.addCount();
-                }
-            }
-        });
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                int count = s3.getCount();
-                System.out.println("获得count--->" + count);
-            }
-        });
+        Thread t1 = new Thread(s3::addCount);
+        Thread t2 = new Thread(s3::getCount);
         t1.start();
         t2.start();
         try {
