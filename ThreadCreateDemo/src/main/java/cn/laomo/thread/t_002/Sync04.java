@@ -11,15 +11,15 @@ public class Sync04 {
 
     //等价于synchronized(Sync04.class)
     public static synchronized void addCount() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             count++;
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("count="+count);
         }
-        System.out.println("count="+count);
     }
 
 
