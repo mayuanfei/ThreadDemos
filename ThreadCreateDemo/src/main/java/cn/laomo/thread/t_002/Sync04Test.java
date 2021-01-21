@@ -2,7 +2,7 @@ package cn.laomo.thread.t_002;
 
 /**
  * @program: ThreadDemos
- * @description:
+ * @description: 同步方法和同步方法是够可以同时运行？
  * @author: 老马
  * @create: 2021-01-20 20:20
  **/
