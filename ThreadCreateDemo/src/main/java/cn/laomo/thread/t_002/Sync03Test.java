@@ -2,7 +2,7 @@ package cn.laomo.thread.t_002;
 
 /**
  * @program: ThreadDemos
- * @description: 锁定当前对象,同步方法和同步方法是够可以同时运行？
+ * @description: 锁定当前对象,同步方法和非同步方法是够可以同时运行？
  * @author: 老马
  * @create: 2021-01-20 16:04
  **/
