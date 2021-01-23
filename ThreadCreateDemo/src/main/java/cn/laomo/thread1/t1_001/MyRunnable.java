@@ -1,4 +1,4 @@
-package cn.laomo.thread.t_000;
+package cn.laomo.thread1.t1_001;
 
 import java.util.concurrent.TimeUnit;
 

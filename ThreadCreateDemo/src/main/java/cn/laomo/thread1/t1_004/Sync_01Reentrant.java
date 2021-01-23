@@ -1,4 +1,4 @@
-package cn.laomo.thread.t_003;
+package cn.laomo.thread1.t1_004;
 
 /**
  * @program: ThreadDemos

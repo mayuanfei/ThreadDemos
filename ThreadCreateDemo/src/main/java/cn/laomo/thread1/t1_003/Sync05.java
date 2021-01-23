@@ -1,4 +1,4 @@
-package cn.laomo.thread.t_002;
+package cn.laomo.thread1.t1_003;
 import java.util.Random;
 
 /**
