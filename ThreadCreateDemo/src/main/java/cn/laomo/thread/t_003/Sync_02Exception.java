@@ -24,6 +24,7 @@ public class Sync_02Exception {
                 System.out.println("出款人"+i+"进行了出款");
                 TimeUnit.SECONDS.sleep(1);
                 if(name.equals("t1") && i == 5) {
+                    //异常产生，可以采用事务回滚也可以捕获异常继续，视具体业务场景而定
                     int j = i/0;
                     System.out.println(j);
                 }
