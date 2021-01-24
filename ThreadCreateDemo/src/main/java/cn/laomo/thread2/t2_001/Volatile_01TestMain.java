@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * @author: 老马
  * @create: 2021-01-23 11:34
  **/
-public class VolatileTestMain {
+public class Volatile_01TestMain {
     public volatile boolean running = true;
 
     @SneakyThrows
@@ -25,7 +25,7 @@ public class VolatileTestMain {
 
     @SneakyThrows
     public static void main(String[] args) {
-        VolatileTestMain test = new VolatileTestMain();
+        Volatile_01TestMain test = new Volatile_01TestMain();
         new Thread(test::m1).start();
         TimeUnit.SECONDS.sleep(1);
         test.running = false;
