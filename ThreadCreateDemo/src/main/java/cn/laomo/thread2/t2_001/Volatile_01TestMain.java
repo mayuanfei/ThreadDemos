@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class Volatile_01TestMain {
     public volatile boolean running = true;
 
+
     @SneakyThrows
     void m1() {
         System.out.println("m1 start");
