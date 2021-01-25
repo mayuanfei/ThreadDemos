@@ -1,4 +1,4 @@
-package cn.laomo.thread1.t1_003;
+package cn.laoma.thread1.t1_003;
 
 import org.junit.Test;
 
@@ -7,16 +7,17 @@ import java.util.List;
 
 /**
  * @program: ThreadDemos
- * @description: 锁定对象
+ * @description: 锁定当前对象
  * @author: 老马
  * @create: 2021-01-20 16:04
  **/
-public class Sync01 {
+public class Sync02 {
     private int count = 0;
-    private Object obj = new Object();
 
+    //synchronized (this)只能锁定同一个实例对象。不同的实例对象锁不住的。
+    //比如以前spring结合Struts时，没有请求都是一个新的对象实例。如果在controller中用synchronized是达不到效果的
     public void addCount() {
-        synchronized (obj) {
+        synchronized (this) {
             count++;
         }
     }

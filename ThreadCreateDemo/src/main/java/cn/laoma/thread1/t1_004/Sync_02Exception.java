@@ -1,4 +1,4 @@
-package cn.laomo.thread1.t1_004;
+package cn.laoma.thread1.t1_004;
 
 import lombok.SneakyThrows;
 

@@ -1,4 +1,4 @@
-package cn.laomo.thread1.t1_002;
+package cn.laoma.thread1.t1_002;
 
 
 import org.junit.Test;
