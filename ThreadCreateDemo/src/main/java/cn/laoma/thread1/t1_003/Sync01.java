@@ -8,12 +8,13 @@ import java.util.List;
 /**
  * @program: ThreadDemos
  * @description: 锁定对象
+ * 注意： 对象本身不能改变.所以一般在锁对象前加final修饰
  * @author: 老马
  * @create: 2021-01-20 16:04
  **/
 public class Sync01 {
     private int count = 0;
-    private Object obj = new Object();
+    private /*final*/ Object obj = new Object();
 
     public void addCount() {
         synchronized (obj) {
