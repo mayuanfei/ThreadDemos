@@ -14,7 +14,7 @@ import java.util.List;
  **/
 public class Sync01 {
     private int count = 0;
-    private /*final*/ Object obj = new Object();
+    private final Object obj = new Object();
 
     public void addCount() {
         synchronized (obj) {
