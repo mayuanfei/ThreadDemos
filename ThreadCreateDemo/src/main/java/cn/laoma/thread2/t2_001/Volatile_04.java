@@ -12,7 +12,7 @@ public class Volatile_04 {
     volatile int count = 0;
 
     /*synchronized*/ void  increment(){
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10000; i++) {
             count ++;
         }
     }
