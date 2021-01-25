@@ -7,11 +7,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @program: ThreadDemos
  * @description: 采用cas【compare and swap】方式
- * while(!this.compareAndSwapInt(var1, var2, var5, var5 + var4))
- * var1(obj) : Unsafe对象本身，需要通过这个类来获取偏移地址中的值
- * var2(offset): 内存偏移地址
- * var5(v) : 期望更新的值。
- * var5 + var4 (v + delta): 要更新的值
+ * compareAndSwapInt(Object var1, long var2, int var4, int var5)
+ * var1：要修改的对象起始地址 如：0x00000111
+ * var2：需要修改的具体内存地址 如100 。0x0000011+100 = 0x0000111就是要修改的值的地址
+ * var4：期望内存中的值，拿这个值和0x0000111内存中的中值比较，如果为true，则修改，返回ture,否则返回false，等待下次修改。
+ * var5：如果上一步比较为ture，则把var5更新到0x0000111其实的内存中。
  * 具体说明：while中的compareAndSwapInt()方法尝试修改v的值,具体地, 该方法也会通过obj和offset获取变量的值
  * 	如果这个值和v不一样, 说明其他线程修改了obj+offset地址处的值, 此时compareAndSwapInt()返回false, 继续循环
  * 	如果这个值和v一样, 说明没有其他线程修改obj+offset地址处的值, 此时可以将obj+offset地址处的值改为v+delta, compareAndSwapInt()返回true, 退出循环
