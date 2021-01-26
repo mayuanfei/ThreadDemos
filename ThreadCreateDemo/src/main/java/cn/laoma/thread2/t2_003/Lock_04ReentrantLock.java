@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author: 老马
  * @create: 2021-01-26 10:53
  **/
-public class lock_04ReentrantLock {
+public class Lock_04ReentrantLock {
 
     @SneakyThrows
     public static void main(String[] args) {

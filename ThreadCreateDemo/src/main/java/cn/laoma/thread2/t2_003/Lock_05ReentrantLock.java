@@ -15,7 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author: 老马
  * @create: 2021-01-26 10:53
  **/
-public class lock_05ReentrantLock {
+public class Lock_05ReentrantLock {
     //观察true和false的区别；默认为false
     private ReentrantLock lock = new ReentrantLock(true);
 
@@ -35,7 +35,7 @@ public class lock_05ReentrantLock {
 
     @SneakyThrows
     public static void main(String[] args) {
-        lock_05ReentrantLock locktest = new lock_05ReentrantLock();
+        Lock_05ReentrantLock locktest = new Lock_05ReentrantLock();
         List<Thread> threads = new ArrayList<>();
         threads.add(new Thread(locktest::show, "t1"));
         threads.add(new Thread(locktest::show, "t2"));

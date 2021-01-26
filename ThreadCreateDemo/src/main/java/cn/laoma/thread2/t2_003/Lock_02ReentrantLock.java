@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author: 老马
  * @create: 2021-01-26 09:49
  **/
-public class lock_02ReentrantLock {
+public class Lock_02ReentrantLock {
     Lock lock = new ReentrantLock();
     public void m1() {
         lock.lock();
@@ -42,7 +42,7 @@ public class lock_02ReentrantLock {
 
     @SneakyThrows
     public static void main(String[] args) {
-        lock_02ReentrantLock lockTest = new lock_02ReentrantLock();
+        Lock_02ReentrantLock lockTest = new Lock_02ReentrantLock();
         new Thread(lockTest::m1).start();
         TimeUnit.MILLISECONDS.sleep(1);
         new Thread(lockTest::m2).start();
