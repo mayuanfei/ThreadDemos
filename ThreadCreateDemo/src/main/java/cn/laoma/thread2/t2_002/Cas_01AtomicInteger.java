@@ -21,16 +21,16 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 	    if(V == expectV) {
  * 	        V = newV
  * 	    }else {
- * 	        继续循环等待
+ * 	        继续循环重试
  * 	    }
  * 	}
+ * 	可能会有ABA问题。
  * @author: 老马
  * @create: 2021-01-25 10:02
  **/
 public class Cas_01AtomicInteger {
 
     private AtomicInteger count = new AtomicInteger(0);
-
     void increment(){
         for (int i = 0; i < 10000; i++) {
             count.getAndIncrement(); //相当于i++
