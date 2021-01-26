@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @program: ThreadDemos
- * @description: 可重入锁。
+ * @description: 可重入锁比synchronized厉害的点
  * 实验trylock
  * @author: 老马
  * @create: 2021-01-26 09:49

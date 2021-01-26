@@ -8,16 +8,17 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @program: ThreadDemos
- * @description: 可重入锁
- * 实验可以被打断
+ * @description: 可重入锁比synchronized厉害的点
+ * 与synchronized关键字不同，获取到锁的线程能够响应中断，
+ * 当获取到锁的线程被中断时，中断异常将会被抛出，同时锁会被释放
  * @author: 老马
  * @create: 2021-01-26 10:53
  **/
 public class lock_03ReentrantLock {
     @SneakyThrows
     public static void main(String[] args) {
+        Lock lock = new ReentrantLock();
         Thread t1 = new Thread(() -> {
-            Lock lock = new ReentrantLock();
             try {
                 lock.lockInterruptibly();
                 for (int i = 1; i < 10; i++) {
