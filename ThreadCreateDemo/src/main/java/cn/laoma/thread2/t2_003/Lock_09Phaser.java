@@ -6,6 +6,7 @@ import java.util.concurrent.Phaser;
  * @program: ThreadDemos
  * @description: 阶段栅栏
  * 每个阶段都是一个CyclicBarrier，都满足条件进入下一个阶段
+ * 每个阶段可以有自己不同的栅栏数
  * 例子：婚礼现场
  * @author: 老马
  * @create: 2021-01-27 21:37
