@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * 能够使一个线程在等待另外一些线程完成各自工作之后，再继续执行
  * 例子：给商户出对账表
  * @author: 老马
- * @create: 2021-01-26 10:53
+ * @create: 2021-01-26 20:53
  **/
 public class Lock_06CountDownLatch {
 

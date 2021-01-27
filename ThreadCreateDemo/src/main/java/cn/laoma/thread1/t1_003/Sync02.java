@@ -9,7 +9,7 @@ import java.util.List;
  * @program: ThreadDemos
  * @description: 锁定当前对象
  * @author: 老马
- * @create: 2021-01-20 16:04
+ * @create: 2021-01-23 16:04
  **/
 public class Sync02 {
     private int count = 0;

@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @program: ThreadDemos
  * @description:
  * @author: 老马
- * @create: 2021-01-20 15:20
+ * @create: 2021-01-20 22:20
  **/
 public class ThreadState {
 

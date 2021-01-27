@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @program: ThreadDemos
  * @description: 异常是会自动释放锁的。其他线程可以拿到有问题的数据，实际编程中小心
  * @author: 老马
- * @create: 2021-01-22 15:50
+ * @create: 2021-01-23 15:50
  **/
 public class Sync_02Exception {
     //没有出款的状态

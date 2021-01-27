@@ -8,7 +8,7 @@ import java.util.concurrent.CyclicBarrier;
  * 例子：多人赛跑。
  * 还可以适用于：满人发车或者20人一团的情况
  * @author: 老马
- * @create: 2021-01-27 13:37
+ * @create: 2021-01-27 21:37
  **/
 public class Lock_08CyclicBarrier {
     public static void main(String[] args) {

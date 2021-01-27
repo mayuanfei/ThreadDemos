@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @description: 可重入锁比synchronized厉害的点
  * 实验trylock
  * @author: 老马
- * @create: 2021-01-26 09:49
+ * @create: 2021-01-26 20:49
  **/
 public class Lock_02ReentrantLock {
     Lock lock = new ReentrantLock();

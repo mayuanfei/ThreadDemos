@@ -6,7 +6,7 @@ package cn.laoma.thread1.t1_003;
  * 1。一个同步方法，一个不同步的方法。是能同时运行的，
  * 2。有可能出现脏读的。看业务是否允许。
  * @author: 老马
- * @create: 2021-01-20 16:04
+ * @create: 2021-01-23 16:04
  **/
 public class Sync03 {
     private int count = 0;

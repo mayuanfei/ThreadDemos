@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 对于那些未竞争的到锁，而 可以被外部调用interrupt()来中断，
  * 从而达到不在等候锁资源，不再去竞争锁
  * @author: 老马
- * @create: 2021-01-26 10:53
+ * @create: 2021-01-26 20:53
  **/
 public class Lock_04ReentrantLock {
 

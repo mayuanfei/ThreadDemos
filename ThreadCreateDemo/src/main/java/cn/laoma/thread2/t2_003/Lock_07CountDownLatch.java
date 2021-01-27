@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * 可以使多个线程并行开始执行
  * 例子：多人赛跑。
  * @author: 老马
- * @create: 2021-01-26 10:53
+ * @create: 2021-01-26 20:53
  **/
 public class Lock_07CountDownLatch {
 

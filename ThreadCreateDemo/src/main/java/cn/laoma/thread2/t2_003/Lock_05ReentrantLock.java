@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 公平锁：线程先进入等待队列FIFO执行。
  * 非公平锁：就是抢锁
  * @author: 老马
- * @create: 2021-01-26 10:53
+ * @create: 2021-01-26 20:53
  **/
 public class Lock_05ReentrantLock {
     //观察true和false的区别；默认为false

@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 与synchronized关键字不同，获取到锁的线程能够响应中断，
  * 当获取到锁的线程被中断时，中断异常将会被抛出，同时锁会被释放
  * @author: 老马
- * @create: 2021-01-26 10:53
+ * @create: 2021-01-26 20:53
  **/
 public class Lock_03ReentrantLock {
     @SneakyThrows
