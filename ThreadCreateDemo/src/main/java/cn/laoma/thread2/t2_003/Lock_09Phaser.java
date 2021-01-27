@@ -78,28 +78,31 @@ public class Lock_09Phaser {
             phaser.arriveAndAwaitAdvance();
         }
         public void onWeddingNight() {
-            if(name.equals("新郎") || name.equals("新娘")) {
-                try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
-                System.out.printf("%s 洞房花烛夜\n", name);
-                phaser.arriveAndAwaitAdvance();
-            }
+            try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
+            System.out.printf("%s 洞房花烛夜\n", name);
         }
         public void havaMonkey() {
-            if(name.equals("新娘")) {
-                try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
-                System.out.printf("%s 生猴子\n", name);
-                phaser.arriveAndAwaitAdvance();
-            }else{
-                phaser.arriveAndDeregister();
-            }
+            try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
+            System.out.printf("%s 生猴子\n", name);
         }
         @Override
         public void run() {
             arrived();
             eat();
             leave();
-            onWeddingNight();
-            havaMonkey();
+            if(name.equals("新郎") || name.equals("新娘")) {
+                onWeddingNight();
+                phaser.arriveAndAwaitAdvance();
+                if(name.equals("新娘")) {
+                    havaMonkey();
+                    phaser.arriveAndAwaitAdvance();
+                }else {
+                    phaser.arriveAndDeregister();
+                }
+            }else {
+                phaser.arriveAndDeregister();
+            }
+
         }
     }
 }
