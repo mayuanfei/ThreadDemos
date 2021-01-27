@@ -44,7 +44,12 @@ public class Lock_09Phaser {
                     return false;
                 case 3 :
                     System.out.println("新娘新郎洞房花烛夜" + registeredParties);
+                    System.out.println("-----------------------------");
                     return false;
+                case 4 :
+                    System.out.println("新娘生猴子" + registeredParties);
+                    System.out.println("-----------------------------");
+                    return true;
                 default:
                     return true;
             }
@@ -77,6 +82,13 @@ public class Lock_09Phaser {
                 try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
                 System.out.printf("%s 洞房花烛夜\n", name);
                 phaser.arriveAndAwaitAdvance();
+            }
+        }
+        public void havaMonkey() {
+            if(name.equals("新娘")) {
+                try {Thread.sleep((long) (Math.random() * 3000));} catch (InterruptedException e) {}
+                System.out.printf("%s 生猴子\n", name);
+                phaser.arriveAndAwaitAdvance();
             }else{
                 phaser.arriveAndDeregister();
             }
@@ -87,6 +99,7 @@ public class Lock_09Phaser {
             eat();
             leave();
             onWeddingNight();
+            havaMonkey();
         }
     }
 }
