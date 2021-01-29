@@ -11,7 +11,7 @@ import java.util.concurrent.Exchanger;
  * @author: 老马
  * @create: 2021-01-28 14:51
  **/
-public class Lock_12Exchanger {
+public class Lock_13Exchanger {
     public static void main(String[] args) {
         Exchanger<String> exchanger = new Exchanger<>();
 

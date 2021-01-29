@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @author: 老马
  * @create: 2021-01-28 09:48
  **/
-public class Lock_11SemaphoreLock {
+public class Lock_12SemaphoreLock {
     static Semaphore sp = new Semaphore(3);
 
     static class Persion extends Thread {

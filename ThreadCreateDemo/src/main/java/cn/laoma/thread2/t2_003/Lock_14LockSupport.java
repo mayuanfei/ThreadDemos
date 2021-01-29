@@ -5,12 +5,12 @@ import java.util.concurrent.locks.LockSupport;
 
 /**
  * @program: ThreadDemos
- * @description: 交换器
+ * @description: 锁支持
  * 作用：阻塞线程用的
  * @author: 老马
  * @create: 2021-01-28 14:51
  **/
-public class Lock_13LockSupport {
+public class Lock_14LockSupport {
     public static void main(String[] args) {
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 10; i++) {
