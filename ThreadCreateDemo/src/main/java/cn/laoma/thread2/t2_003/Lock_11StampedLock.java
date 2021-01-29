@@ -1,5 +1,6 @@
 package cn.laoma.thread2.t2_003;
 
+import java.util.Random;
 import java.util.concurrent.locks.StampedLock;
 
 /**
@@ -7,6 +8,7 @@ import java.util.concurrent.locks.StampedLock;
  * @description: 邮戳锁
  * ReadWriteLock读的过程中不允许写，是一种悲观的读锁
  * JDK8引入的新锁。 读的过程中也允许获取写锁后然后写入，采用乐观的读锁
+ * 是不可重入锁。
  * @author: 老马
  * @create: 2021-01-28 09:48
  **/
@@ -25,6 +27,7 @@ public class Lock_11StampedLock {
             y += _y;
         } finally {
             //通过这个邮戳号释放写锁
+            System.out.println("x：" + x + ",y：" + y);
             stampedLock.unlockWrite(stamp);
         }
     }
@@ -52,7 +55,19 @@ public class Lock_11StampedLock {
             }
         }
         //计算到原点的距离
-        return Math.sqrt(curX * curX + curY * curY);
+        double dist = Math.sqrt(curX * curX + curY * curY);
+        System.out.println("距离原点：" + dist);
+        return dist;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 20; i++) {
+            if(i==5 || i==10 || i==15) {
+                new Thread(() -> Lock_11StampedLock.move(new Random().nextDouble(),new Random().nextDouble())).start();
+            }else {
+                new Thread(Lock_11StampedLock::distanceFromOrigin).start();
+            }
+        }
     }
 
 
