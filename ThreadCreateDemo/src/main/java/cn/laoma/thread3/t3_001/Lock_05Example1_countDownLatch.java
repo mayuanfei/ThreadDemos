@@ -31,12 +31,10 @@ public class Lock_05Example1_countDownLatch {
         final CountDownLatch t2CountDownLatch2 = new CountDownLatch(1);
         //监控线程
         new Thread(() -> {
-            if (example1.size() != 5) {
-                try {
-                    t2CountDownLatch2.await();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            try {
+                t2CountDownLatch2.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
             System.out.println("当前容器size=" + example1.size() + "，线程2结束");
             t1CountDownLatch1.countDown();

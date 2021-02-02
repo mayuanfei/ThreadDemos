@@ -30,12 +30,10 @@ public class Lock_04Example1_countDownLatch {
         final CountDownLatch countDownLatch = new CountDownLatch(1);
         //监控线程
         new Thread(() -> {
-            if (example1.size() != 5) {
-                try {
-                    countDownLatch.await();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
             System.out.println("当前容器size=" + example1.size() + "，线程2结束");
         }, "t2").start();

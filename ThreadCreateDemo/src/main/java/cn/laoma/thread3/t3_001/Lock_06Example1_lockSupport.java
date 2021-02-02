@@ -31,9 +31,7 @@ public class Lock_06Example1_lockSupport {
 
         //监控线程
         t2 = new Thread(() -> {
-            if (example1.size() != 5) {
-                LockSupport.park();
-            }
+            LockSupport.park();
             System.out.println("当前容器size=" + example1.size() + "，线程2结束");
             LockSupport.unpark(t1);
         }, "t2");
