@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @program: ThreadDemos
  * @description: 可重入锁比synchronized厉害的点
  * 对于那些未竞争的到锁，而 可以被外部调用interrupt()来中断，
- * 从而达到不在等候锁资源，不再去竞争锁
+ * 从而达到不再等候锁资源，不再去竞争锁
  * @author: 老马
  * @create: 2021-01-26 20:53
  **/
