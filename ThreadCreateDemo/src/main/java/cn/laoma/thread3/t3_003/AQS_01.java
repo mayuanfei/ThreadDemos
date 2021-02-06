@@ -9,14 +9,26 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create: 2021-02-05 17:23
  **/
 public class AQS_01 {
-    public static void main(String[] args) {
-        ReentrantLock lock = new ReentrantLock();
+    private static volatile  int count = 0;
+    ReentrantLock lock = new ReentrantLock();
+
+    public void addCount() {
         lock.lock();
         try {
+            count ++;
+            System.out.println("count="+count);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
             lock.unlock();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        AQS_01 aqs = new AQS_01();
+        for (int i = 0; i < 10; i++) {
+            new Thread(aqs::addCount, "t"+i).start();
         }
     }
 }
