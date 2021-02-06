@@ -5,6 +5,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @program: ThreadDemos
  * @description: 本例子仅仅用于阅读源码用。
+ * AQS核心一个state，一个链表
+ * 所有的操作都是基于cas操作，效率高。
  * @author: 老马
  * @create: 2021-02-05 17:23
  **/
