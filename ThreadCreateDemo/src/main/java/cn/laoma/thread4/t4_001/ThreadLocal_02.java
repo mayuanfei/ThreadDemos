@@ -33,7 +33,7 @@ public class ThreadLocal_02 {
         new Thread(()->{
             try {TimeUnit.SECONDS.sleep(2);} catch (InterruptedException e) {}
             System.out.println("t1===>" + local.get());
-            local.remove();//避免内存泄漏最好用过后移除掉
+            local.remove();//避免内存泄漏用过后移除掉
         }, "t1").start();
 
         new Thread(() -> {
