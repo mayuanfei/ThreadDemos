@@ -10,15 +10,15 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * @program: ThreadDemos
- * @description:
+ * @description: 以前排序的map是用treeMap，高并发下用ConcurrentSkipListMap进行排序
  * @author: 老马
  * @create: 2021-03-09 09:20
  **/
-public class T02_ConcurrentMap {
+public class T01_ConcurrentSkipListMap {
 
     public static void main(String[] args) {
-        //Map<Integer, Integer > map = new ConcurrentHashMap<>();
-        Map<Integer, Integer > map = new ConcurrentSkipListMap<>();//高并发排序。通过跳表实现。
+        //Map<Integer, Integer > map = new ConcurrentHashMap<>();//没有排序功能
+        Map<Integer, Integer > map = new ConcurrentSkipListMap<>();//高并发并且排序。通过跳表实现。
 
         Thread[] threads = new Thread[100];
         CountDownLatch latch = new CountDownLatch(threads.length);
